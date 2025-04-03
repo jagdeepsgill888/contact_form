@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build--base=/contact_form",
+    "build": "vite build --base=/contact_form",
     "preview": "vite preview"
   },
   "dependencies": {

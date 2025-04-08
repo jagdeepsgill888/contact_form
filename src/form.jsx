@@ -1,7 +1,10 @@
+import React, { useState } from 'react';
 import 'bulma/css/bulma.min.css';
 import { Form, Icon, Button } from 'react-bulma-components';
 
 export function SubscriberForm() {
+    const [message, setMessage] = useState("");
+
     return <form onSubmit={event => {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -9,7 +12,7 @@ export function SubscriberForm() {
         console.log(formObject);
     }}>
       <Form.Field>
-        <Form.Label>Username</Form.Label>
+        <Form.Label>Full name</Form.Label>
         <Form.Control>
           <Form.Input
             color="success"
@@ -48,14 +51,29 @@ export function SubscriberForm() {
             <Form.Select
               name="subject"
             >
-              <option value="select-dropdown">Select dropdown</option>
-              <option value="with-options">With options</option>
+              <option value="">Select a subject</option>
+              <option value="Customer Support">Customer Support</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Catering/Booking">Catering / Booking</option>
             </Form.Select>
           </Form.Control>
           <Form.Control fullwidth loading>
-            <Form.Input placeholder="With loading state" />
+            <Form.Input placeholder="Topic of Conversation" />
           </Form.Control>
         </Form.Field>
+      </Form.Field>
+
+      <Form.Field>
+        <Form.Label>Message</Form.Label>
+        <Form.Control>
+          <Form.Textarea
+            name="message"
+            value={message}
+            onChange={(e) => {
+              return setMessage(e.target.value);
+            }}
+          />
+        </Form.Control>
       </Form.Field>
 
       <Form.Field kind="group">
@@ -69,5 +87,8 @@ export function SubscriberForm() {
         </Form.Control>
       </Form.Field>
 
+
     </form>
+
+    
 }

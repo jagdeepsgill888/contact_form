@@ -46,8 +46,9 @@ export function SubscriberForm() {
         <Form.Label>Email</Form.Label>
         <Form.Control>
           <Form.Input
-            color="danger"
+            color="success"
             name="email"
+            placeholder="e.g amy@gmail.com"
           />
           <Icon align="left" size="small">
             <i className="fas fa-envelope" />
@@ -66,9 +67,9 @@ export function SubscriberForm() {
               name="subject"
             >
               <option value="">Select a subject</option>
+              <option value="Catering Booking">Catering Booking</option>
               <option value="Customer Support">Customer Support</option>
               <option value="Marketing">Marketing</option>
-              <option value="Catering/Booking">Catering / Booking</option>
             </Form.Select>
           </Form.Control>
           <Form.Control fullwidth loading>

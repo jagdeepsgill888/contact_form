@@ -15,7 +15,6 @@ export function SubscriberForm() {
         <Form.Label>Full name</Form.Label>
         <Form.Control>
           <Form.Input
-            color="success"
             name="username"
           />
           <Icon align="left" size="small">

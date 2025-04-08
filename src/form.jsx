@@ -25,7 +25,21 @@ export function SubscriberForm() {
             <i className="fas fa-check" />
           </Icon>
         </Form.Control>
-        <Form.Help color="success">This username is available</Form.Help>
+      </Form.Field>
+
+      <Form.Field>
+        <Form.Label>Phone Number</Form.Label>
+        <Form.Control>
+          <Form.Input
+            type="tel"
+            name="phone"
+            placeholder="e.g 555-421-6423"
+            color="primary"
+          />
+          <Icon align="left" size="small">
+            <i className="fas fa-phone" />
+          </Icon>
+        </Form.Control>
       </Form.Field>
 
       <Form.Field>
@@ -61,6 +75,37 @@ export function SubscriberForm() {
             <Form.Input placeholder="Topic of Conversation" />
           </Form.Control>
         </Form.Field>
+      </Form.Field>
+
+      <Form.Field>
+        <Form.Label>If Catering, enter date Date</Form.Label>
+        <Form.Control>
+          <Form.Input
+            type="date"
+            name="cateringDate"
+            color="primary"
+          />
+          <Icon align="left" size="small">
+            <i className="fas fa-calendar-alt" />
+          </Icon>
+        </Form.Control>
+        <Form.Help color="success">Date is available</Form.Help>
+      </Form.Field>
+
+      <Form.Field>
+        <Form.Label>Number of guest</Form.Label>
+        <Form.Control>
+          <Form.Input
+            type="number"
+            name="numberOfGuest"
+            min="1"
+            placeholder="e.g for '50' guest"
+            color="primary"
+          />
+          <Icon align="left" size="small">
+            <i className="fas fa-users" />
+          </Icon>
+        </Form.Control>
       </Form.Field>
 
       <Form.Field>
